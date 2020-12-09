@@ -1,0 +1,89 @@
+.container {
+  width: 360px;
+  height: 175px;
+  background-color: transparent;
+  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
+  color: orange;
+  font-size: small;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  box-shadow: 2px 2px 10px rgba(1, 87, 87, 0.3);
+}
+@media (min-width: 481px) {
+  .container {
+    width: 440px;
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+.container link {
+  display: none;
+}
+
+.image {
+  background-image: linear-gradient(to right, #008080 50%, transparent 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #008080;
+  overflow: hidden;
+}
+.img-container img {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.descriptions {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.descriptions::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 6px;
+  background-color: #ff5f18;
+}
+.descriptions__header-name {
+  color: #008080;
+  font-size: large;
+}
+.descriptions__social {
+  display: flex;
+  flex-direction: row;
+}
+
+.descriptions__social svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #ff5f18;
+  margin-right: 5px;
+}
+.descriptions__social svg:hover {
+  fill: #008080;
+  cursor: pointer;
+}
+.descriptions__social a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: hsl(18, 100%, 55%);
+  margin-right: 5px;
+}
+.descriptions__social a img:hover {
+  fill: hsl(180, 100%, 25%);
+  cursor: pointer;
+  filter: hue-rotate(162deg) brightness(80%);
+}
